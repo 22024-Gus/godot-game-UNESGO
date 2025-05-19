@@ -120,7 +120,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_373ot"]
-size = Vector2(30, 51)
+size = Vector2(33, 51)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_ftvnn")
@@ -129,10 +129,11 @@ script = ExtResource("1_ftvnn")
 texture_filter = 1
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_sytx2")
-animation = &"idle"
+animation = &"jumping"
 autoplay = "idle"
-frame_progress = 0.759839
+frame = 7
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 10.5)
+position = Vector2(1.5, 10.5)
 shape = SubResource("RectangleShape2D_373ot")
