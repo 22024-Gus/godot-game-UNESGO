@@ -1,8 +1,11 @@
-[gd_scene load_steps=6 format=4 uid="uid://bxt31wy7vjo1p"]
+[gd_scene load_steps=9 format=4 uid="uid://bxt31wy7vjo1p"]
 
 [ext_resource type="Texture2D" uid="uid://b5dokl6bd2lkr" path="res://resources/Green.png" id="1_c07xs"]
 [ext_resource type="Texture2D" uid="uid://ch86kjckp8paq" path="res://resources/Terrain (16x16).png" id="2_44wm8"]
 [ext_resource type="PackedScene" uid="uid://e16isattsfhc" path="res://scenes/main_character.tscn" id="3_j5clk"]
+[ext_resource type="Texture2D" uid="uid://bcjr18tsehkom" path="res://resources/background.png" id="4_0k83x"]
+[ext_resource type="Texture2D" uid="uid://ryvj61htofok" path="res://resources/over.png" id="5_hoowd"]
+[ext_resource type="Texture2D" uid="uid://dmm4dpc13e8x" path="res://resources/healthbar.png" id="6_h3wab"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_by75n"]
 texture = ExtResource("2_44wm8")
@@ -200,3 +203,14 @@ tile_set = SubResource("TileSet_vsm1b")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_j5clk")]
 position = Vector2(131, 174)
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+offset_left = 32.0
+offset_top = 631.0
+offset_right = 232.0
+offset_bottom = 681.0
+step = 0.5
+value = 100.0
+texture_under = ExtResource("4_0k83x")
+texture_over = ExtResource("5_hoowd")
+texture_progress = ExtResource("6_h3wab")
