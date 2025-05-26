@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://bxt31wy7vjo1p"]
+[gd_scene load_steps=12 format=4 uid="uid://bxt31wy7vjo1p"]
 
 [ext_resource type="Texture2D" uid="uid://b5dokl6bd2lkr" path="res://resources/Green.png" id="1_c07xs"]
 [ext_resource type="Texture2D" uid="uid://ch86kjckp8paq" path="res://resources/Terrain (16x16).png" id="2_44wm8"]
@@ -6,7 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://bcjr18tsehkom" path="res://resources/background.png" id="4_0k83x"]
 [ext_resource type="Texture2D" uid="uid://ryvj61htofok" path="res://resources/over.png" id="5_hoowd"]
 [ext_resource type="Texture2D" uid="uid://dmm4dpc13e8x" path="res://resources/healthbar.png" id="6_h3wab"]
-[ext_resource type="Script" path="res://scenes/health-bar.gd" id="7_n58rd"]
+[ext_resource type="Script" path="res://scenes/health_bar_social.gd" id="7_msdta"]
+[ext_resource type="Script" path="res://scenes/health_bar_mental.gd" id="7_s8pjg"]
+[ext_resource type="Script" path="res://scenes/health_bar_physical.gd" id="7_ybp4g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_by75n"]
 texture = ExtResource("2_44wm8")
@@ -215,7 +217,7 @@ value = 100.0
 texture_under = ExtResource("4_0k83x")
 texture_over = ExtResource("5_hoowd")
 texture_progress = ExtResource("6_h3wab")
-script = ExtResource("7_n58rd")
+script = ExtResource("7_ybp4g")
 
 [node name="Health-bar-Social" type="TextureProgressBar" parent="."]
 offset_left = 34.0
@@ -227,7 +229,7 @@ value = 100.0
 texture_under = ExtResource("4_0k83x")
 texture_over = ExtResource("5_hoowd")
 texture_progress = ExtResource("6_h3wab")
-script = ExtResource("7_n58rd")
+script = ExtResource("7_msdta")
 
 [node name="Health-bar-Mental" type="TextureProgressBar" parent="."]
 offset_left = 33.0
@@ -239,4 +241,4 @@ value = 100.0
 texture_under = ExtResource("4_0k83x")
 texture_over = ExtResource("5_hoowd")
 texture_progress = ExtResource("6_h3wab")
-script = ExtResource("7_n58rd")
+script = ExtResource("7_s8pjg")
