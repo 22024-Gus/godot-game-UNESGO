@@ -1,6 +1,14 @@
 # godot-game-UNESGO
-[Current Version: 1.41]
+[Current Version: 1.61]
 
+
+editing to get health collectables
+
+
+1.6 (actually 1.5):
+
+
+1.41:
 seperated scripts so health bars work
 
 1.4:
