@@ -1,12 +1,16 @@
 # godot-game-UNESGO
-[Current Version: 1.61]
 
 
-editing to get health collectables
+[Current Version: 1.7]
 
+edited - full health rework and its working but collect not
+
+
+1.61:
+editing to get health collectables working
 
 1.6 (actually 1.5):
-
+i added some backgrounds for the game
 
 1.41:
 seperated scripts so health bars work

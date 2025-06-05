@@ -1,9 +1,9 @@
 extends Area2D
 
-@onready var game_manager: Node = %GameManager
+@onready var health_bar_physical: TextureProgressBar = %"Health-bar-Physical"
 
 
 func _on_body_entered(body: Node2D) -> void:
 	if (body.name == "CharacterBody2D"):
 		queue_free()
-		game_manager.add_phys_health()
+		health_bar_physical.add_phys_health()
