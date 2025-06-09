@@ -2,7 +2,7 @@
 
 
 [Current Version: 2.0]
-implemented different scenes
+secondary scenes, animated door to go thru - just need to get accept button to work so it doesn't just teleport on touch
 
 1.81:
 social and physical healthbars now working
