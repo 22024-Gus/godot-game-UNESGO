@@ -1,8 +1,20 @@
 # godot-game-UNESGO
 
 
-[Current Version: 1.7]
+[Current Version: 2.0]
+implemented different scenes
 
+1.81:
+social and physical healthbars now working
+
+1.8:
+collectable 2 being implemented - social
+
+1.71:
+healthbar is now working along with increasable
+
+
+1.7:
 edited - full health rework and its working but collect not
 
 

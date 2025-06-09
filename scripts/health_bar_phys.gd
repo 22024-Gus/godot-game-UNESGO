@@ -5,6 +5,7 @@ const BARSPEED = 2
 var current_bar_value = 100
 
 func _process(delta):
+	if (player.velocity.x > 1 || player.velocity.x < -1 || player.velocity.y > 1 || player.velocity.y < -1):
 		current_bar_value -= BARSPEED * delta
 	
 		# Don't go below zero

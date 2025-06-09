@@ -189,7 +189,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_2keat"]
 radius = 11.0454
 
-[node name="Collectable" type="Area2D"]
+[node name="PhysCollectable" type="Area2D"]
 position = Vector2(-1, 0)
 scale = Vector2(2, 2)
 script = ExtResource("1_vpge6")
