@@ -5,9 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://e16isattsfhc" path="res://scenes/main_character.tscn" id="3_j5clk"]
 [ext_resource type="Texture2D" uid="uid://bcjr18tsehkom" path="res://resources/background.png" id="4_0k83x"]
 [ext_resource type="Texture2D" uid="uid://dmm4dpc13e8x" path="res://resources/healthbar.png" id="6_h3wab"]
-[ext_resource type="Script" path="res://scripts/health_bar_physical.gd" id="7_ybp4g"]
+[ext_resource type="Script" path="res://scripts/health_bar_soci.gd" id="7_tvykb"]
+[ext_resource type="Script" path="res://scripts/health_bar_phys.gd" id="7_ybp4g"]
 [ext_resource type="PackedScene" uid="uid://df7dfx7b774jc" path="res://scenes/soci_collectable.tscn" id="8_16lka"]
-[ext_resource type="Script" path="res://scenes/soci_collectable.gd" id="9_lbs78"]
 [ext_resource type="PackedScene" uid="uid://i5ofs8v05ujw" path="res://scenes/phys_collectable.tscn" id="10_qflsn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_by75n"]
@@ -249,7 +249,7 @@ offset_right = 200.0
 offset_bottom = 52.0
 text = "Physical Health"
 
-[node name="Health-bar-Social" type="TextureProgressBar" parent="CharacterBody2D/Camera2D" node_paths=PackedStringArray("player")]
+[node name="Health-bar-Social" type="TextureProgressBar" parent="CharacterBody2D/Camera2D"]
 unique_name_in_owner = true
 offset_left = -525.0
 offset_top = 175.0
@@ -259,8 +259,7 @@ value = 100.0
 rounded = true
 texture_under = ExtResource("4_0k83x")
 texture_progress = ExtResource("6_h3wab")
-script = ExtResource("7_ybp4g")
-player = NodePath("../..")
+script = ExtResource("7_tvykb")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CharacterBody2D/Camera2D/Health-bar-Social"]
 layout_mode = 0
@@ -280,4 +279,4 @@ position = Vector2(815, 210)
 [node name="SociCollectables (group)" type="Node" parent="."]
 
 [node name="SociCollectable" parent="SociCollectables (group)" instance=ExtResource("8_16lka")]
-script = ExtResource("9_lbs78")
+position = Vector2(864, 520)

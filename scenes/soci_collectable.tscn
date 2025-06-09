@@ -1,6 +1,7 @@
-[gd_scene load_steps=30 format=3 uid="uid://df7dfx7b774jc"]
+[gd_scene load_steps=31 format=3 uid="uid://df7dfx7b774jc"]
 
 [ext_resource type="Texture2D" uid="uid://crt571x204ixo" path="res://resources/Collected.png" id="1_vtsp6"]
+[ext_resource type="Script" path="res://scripts/soci_collectable.gd" id="1_ykh35"]
 [ext_resource type="Texture2D" uid="uid://bhtopxgkcfniu" path="res://resources/AnimationSheet.png" id="2_isglr"]
 [ext_resource type="Texture2D" uid="uid://6p3h6rqk3bvb" path="res://resources/Bananas.png" id="3_glvev"]
 
@@ -188,6 +189,8 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_4qvhm"]
 
 [node name="SociCollectable" type="Area2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_ykh35")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -197,3 +200,6 @@ frame_progress = 0.292179
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_4qvhm")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
