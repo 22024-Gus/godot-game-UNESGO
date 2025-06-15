@@ -1,16 +1,17 @@
-[gd_scene load_steps=14 format=4 uid="uid://bxt31wy7vjo1p"]
+[gd_scene load_steps=15 format=4 uid="uid://bxt31wy7vjo1p"]
 
 [ext_resource type="Texture2D" uid="uid://dgf2vifc504h7" path="res://resources/city backgrounds - by me/city 1/10.png" id="1_1bcek"]
 [ext_resource type="Texture2D" uid="uid://ch86kjckp8paq" path="res://resources/Terrain (16x16).png" id="2_44wm8"]
 [ext_resource type="PackedScene" uid="uid://e16isattsfhc" path="res://scenes/main_character.tscn" id="3_j5clk"]
 [ext_resource type="Texture2D" uid="uid://bcjr18tsehkom" path="res://resources/background.png" id="4_0k83x"]
+[ext_resource type="PackedScene" uid="uid://cu3v5jhub6km8" path="res://scenes/building1.tscn" id="4_ghapa"]
+[ext_resource type="PackedScene" uid="uid://bcs1gf24lqcb4" path="res://scenes/gameover.tscn" id="6_b4171"]
 [ext_resource type="Texture2D" uid="uid://dmm4dpc13e8x" path="res://resources/healthbar.png" id="6_h3wab"]
 [ext_resource type="Script" path="res://scripts/health_bar_soci.gd" id="7_tvykb"]
 [ext_resource type="Script" path="res://scripts/health_bar_phys.gd" id="7_ybp4g"]
 [ext_resource type="PackedScene" uid="uid://df7dfx7b774jc" path="res://scenes/soci_collectable.tscn" id="8_16lka"]
 [ext_resource type="PackedScene" uid="uid://bfiarjr2ylf6v" path="res://scenes/door.tscn" id="10_6yeeb"]
 [ext_resource type="PackedScene" uid="uid://i5ofs8v05ujw" path="res://scenes/phys_collectable.tscn" id="10_qflsn"]
-[ext_resource type="PackedScene" uid="uid://y5hg2eq1rogb" path="res://scenes/building1.tscn" id="11_3eabw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_by75n"]
 texture = ExtResource("2_44wm8")
@@ -229,10 +230,11 @@ tile_set = SubResource("TileSet_vsm1b")
 
 [node name="Area2D" parent="doors" instance=ExtResource("10_6yeeb")]
 position = Vector2(1474, 551)
-target_level = ExtResource("11_3eabw")
+target_level = ExtResource("4_ghapa")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_j5clk")]
 position = Vector2(131, 174)
+gameover = ExtResource("6_b4171")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 

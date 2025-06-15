@@ -4,7 +4,9 @@ extends CharacterBody2D
 const SPEED = 200.0
 const JUMP_VELOCITY = -450.0
 @onready var sprite_2d: AnimatedSprite2D = $Sprite2D
-
+@onready var health_bar_physical: TextureProgressBar = %"Health-bar-Physical"
+@onready var health_bar_social: TextureProgressBar = %"Health-bar-Social"
+@export var gameover: PackedScene
 
 func _physics_process(delta: float) -> void:
 	#animations.
@@ -37,4 +39,7 @@ func _physics_process(delta: float) -> void:
 	
 	sprite_2d.flip_h = isLeft
 	
-	
+	if health_bar_physical.value == 0:
+		get_tree().change_scene_to_packed(gameover)
+	elif health_bar_social.value == 0:
+		get_tree().change_scene_to_packed(gameover)
