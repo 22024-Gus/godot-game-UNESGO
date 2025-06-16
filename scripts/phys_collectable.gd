@@ -6,7 +6,7 @@ extends Area2D
 
 
 func _on_body_entered(body: Node2D) -> void:
-	if (body.name == "CharacterBody2D"):
-		animated_sprite_2d.animation = "collected"
-		health_bar_physical.add_phys_health()
-		queue_free()
+	if (body.name == "CharacterBody2D"): # checks if thing touched is player
+		animated_sprite_2d.animation = "collected" # changes to collect animation
+		health_bar_physical.add_phys_health() # adds physical health
+		queue_free() # deletes object
