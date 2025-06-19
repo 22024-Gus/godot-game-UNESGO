@@ -1,8 +1,17 @@
 # godot-game-UNESGO
 
 
-[Current Version: 2.0]
-secondary scenes, animated door to go thru - just need to get accept button to work so it doesn't just teleport on touch
+[Current Version: 2.1 (2.2)]
+
+
+added comments to code, tweaked a couple of bits in building and added text for support to game
+
+
+2.1
+adding evidence to files mainly but also tweaking and fixing - including game over screen
+
+2.0:
+secondary scenes, animated door to go thru
 
 1.81:
 social and physical healthbars now working

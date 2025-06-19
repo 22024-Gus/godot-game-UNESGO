@@ -217,4 +217,5 @@ scale = Vector2(4, 4)
 text = "Game Over"
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_b7mmm")]
-position = Vector2(591, 517)
+position = Vector2(596, 532)
+gameover = null
